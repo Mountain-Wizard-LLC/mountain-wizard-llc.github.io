@@ -1,0 +1,271 @@
+img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+footer {
+    margin: 0;
+    padding: 0;
+}
+
+/* CSS for the site title */
+.site-title {
+    font-size: 24px;
+    margin-right: 20px; /* Add space between the title and the menu */
+    color: #fff; /* Text color for the title */
+    white-space: nowrap; /* Prevent line breaks */
+    text-align: center;
+    padding-left: 60px;
+}
+
+/* Default light mode styles */
+:root {
+    --bg-color: #f2f2f2; /* Light background color */
+    --text-color: #333; /* Dark text color */
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #333; /* Dark background color */
+        --text-color: #f2f2f2; /* Light text color */
+    }
+}
+
+/* Reset some default margin and padding */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--bg-color-dark); /* Dark mode background color */
+        color: var(--text-color-dark); /* Dark mode text color */
+    }
+}
+
+/* Default navigation bar styles */
+.navbar {
+    font-family: Calibri, sans-serif;
+    background-color: #242323 !important;
+    color: #fff;
+    display: flex;
+    justify-content: center; /* Horizontally center navbar */
+    align-items: center; /* Vertically center navbar */
+    padding: 10px 20px;
+    position: relative;
+    z-index: 9999;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0; /* Remove default padding */
+}
+
+.navbar li {
+    margin: 0 10px; /* Adjust margin to create space between items */
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center; /* Center text horizontally */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Hamburger menu styles (initially hidden) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff; /* White bar color */
+    margin: 3px 0;
+}
+
+/* Media query to show/hide elements */
+@media (max-width: 770px) {
+    .navbar .mobile-menu {
+        display: none; /* Hide the mobile menu */
+        position: fixed;
+        top: 20%; /* Center vertically */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Center the menu */
+        background-color: #242323; /* Dark background color */
+        width: 80%; /* Adjust the width as needed */
+        max-width: 100px; /* Set a maximum width */
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Optional: Add a shadow for style */
+    }
+
+    .navbar .mobile-menu.show {
+        display: block; /* Show the mobile menu when the 'show' class is present */
+    }
+
+    .navbar ul {
+        display: none; /* Hide the list items */
+        flex-direction: column;
+        background-color: #333; /* Dark background color for mobile menu */
+        position: absolute;
+        top: 60px;
+        right: 0; /* Align to the right side */
+        width: 100%;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+        text-align: center; /* Align text to the right */
+    }
+
+    .menu-toggle {
+        display: block; /* Show the hamburger menu icon */
+    }
+}
+
+
+/* Middle Section Styles */
+.content {
+    background-color: #f2f2f2; /* Light gray background color */
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #242323; /* Gray background color */
+    color: #fff; /* White text color */
+    text-align: center;
+    padding: 20px;  
+      
+}
+
+.footer p {
+    text-align: center;
+    font-family: Calibri, sans-serif; /* Set the font-family to Calibri and provide a fallback font if Calibri is not available */
+}
+
+/* CSS for footer links */
+.footer-links {
+    text-align: center; /* Align links to the right */
+    margin-bottom: 10px; /* Add spacing below links */
+    font-family: Calibri, sans-serif; /* Set the font-family to Calibri and provide a fallback font if Calibri is not available */
+}
+
+.footer-links a {
+    margin-right: 10px; /* Add spacing between links */
+    text-decoration: none;
+    color: #0074d9; /* Link color */
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
+
+.footer-links a img {
+    width: 30px; /* Adjust the width as needed */
+    height: 30px; /* Adjust the height as needed */
+    margin-right: 10px; /* Add spacing between images */
+}
+
+
+/* Style the submenu */
+.submenu {
+    display: none; /* Initially hide the submenu */
+    position: absolute;
+    background-color: #525252;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 200px; /* Adjust the maximum width as needed */
+
+}
+
+/* Style the submenu items */
+.submenu li {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 10px;
+    text-align: center; /* Center the text horizontally */
+    height: 100%; /* Set the height of submenu items to 100% */
+
+}
+
+/* Style the submenu links */
+.submenu a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Show the submenu on hover */
+.has-submenu:hover .submenu {
+    display: block; /* Display the submenu when the parent is hovered over */
+}
+
+/* Media query to hide submenu on larger screens */
+@media (min-width: 769px) {
+    .has-submenu .submenu {
+        display: none; /* Hide the submenu on screens wider than 768px */
+    }
+}
+
+/* Style the image container */
+.image-container {
+    position: relative;
+    width: 100%; /* Set the width you want */
+    height: 175px; /* Set the fixed height you want */
+    overflow: hidden; /* Ensure overflow is hidden */
+    margin: 0 auto; /* Center the container horizontally */
+    border-radius: 10px; /* makes edges round
+}
+
+/* Style the image */
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container */
+    display: block; /* Ensure the image does not have default inline spacing */
+}
+
+/* Style the text overlay */
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    pointer-events: none; /* Ensures the overlay does not interfere with image events */
+    text-align: center; /* Center text horizontally */
+}
+
+/* Style the text elements within the overlay */
+.text-overlay h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.text-overlay p {
+    font-size: 18px;
+}

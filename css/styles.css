@@ -1,0 +1,318 @@
+/* Style headers */
+h1, h2, h3 {
+    text-align: center; /* Center headers horizontally */
+    margin-top: 20px; /* Add space above headers */
+    margin-bottom: 20px; /* Add space below headers */
+    font-family: Calibri, sans-serif; /* Set the font-family to Calibri and provide a fallback font if Calibri is not available */
+}
+
+a{
+    font-family: Calibri, sans-serif;
+}
+
+/* Style paragraphs */
+p, li, ol {
+    text-align: justify;
+    text-align-last: center;
+    text-justify: inter-word; 
+    margin-bottom: 20px;
+    font-family: Calibri, sans-serif; /* Set the font-family to Calibri and provide a fallback font if Calibri is not available */
+    font-size: 18px; /* Specify the font size (you were missing "px" in your original code) */
+    padding: 0 30px;
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: none;
+  }
+/* CSS for the site title */
+.site-title {
+    font-size: 24px;
+    margin-right: 20px; /* Add space between the title and the menu */
+    color: #fff; /* Text color for the title */
+}
+
+/* Default light mode styles */
+:root {
+    --bg-color: #f2f2f2; /* Light background color */
+    --text-color: #333; /* Dark text color */
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #333; /* Dark background color */
+        --text-color: #f2f2f2; /* Light text color */
+    }
+}
+
+/* Reset some default margin and padding */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--bg-color-dark); /* Dark mode background color */
+        color: var(--text-color-dark); /* Dark mode text color */
+    }
+}
+
+/* Default navigation bar styles */
+.navbar {
+    font-family: Calibri, sans-serif; /* Set the font-family to Calibri and provide a fallback font if Calibri is not available */
+    background-color: #242323 !important; /* Gray background color */
+    color: #fff; /* White text color */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative; /* Ensure that z-index works */
+    z-index: 9999; /* Set a high z-index value to place the header on top */
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0; /* Remove default margin */
+    z-index: 100;
+}
+
+.navbar li {
+    margin-left: 20px; /* Adjust margin to create space between items */
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff; /* White text color */
+}
+
+/* Hamburger menu styles (initially hidden) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff; /* White bar color */
+    margin: 3px 0;
+}
+
+
+
+
+/* Middle Section Styles */
+.content {
+    background-color: #f2f2f2; /* Light gray background color */
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #242323; /* Gray background color */
+    color: #fff; /* White text color */
+    text-align: center;
+    padding: 20px;  
+      
+}
+
+.footer p {
+    text-align: center;
+    font-family: Calibri, sans-serif; /* Set the font-family to Calibri and provide a fallback font if Calibri is not available */
+}
+
+/* CSS for footer links */
+.footer-links {
+    text-align: center; /* Align links to the right */
+    margin-bottom: 10px; /* Add spacing below links */
+    font-family: Calibri, sans-serif; /* Set the font-family to Calibri and provide a fallback font if Calibri is not available */
+}
+
+.footer-links a {
+    margin-right: 10px; /* Add spacing between links */
+    text-decoration: none;
+    color: #0074d9; /* Link color */
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
+
+
+/* Style the submenu */
+.submenu {
+    display: none; /* Initially hide the submenu */
+    position: absolute;
+    background-color: #525252;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 200px; /* Adjust the maximum width as needed */
+
+}
+
+/* Style the submenu items */
+.submenu li {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 10px;
+    text-align: center; /* Center the text horizontally */
+    height: 100%; /* Set the height of submenu items to 100% */
+
+}
+
+/* Style the submenu links */
+.submenu a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Show the submenu on hover */
+.has-submenu:hover .submenu {
+    display: block; /* Display the submenu when the parent is hovered over */
+}
+
+/* Media query to hide submenu on larger screens */
+@media (min-width: 769px) {
+    .has-submenu .submenu {
+        display: none; /* Hide the submenu on screens wider than 768px */
+    }
+}
+
+/* Style the image container */
+.image-container {
+    position: relative;
+}
+
+/* Style the image */
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+/* Style the text overlay */
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Style the text elements within the overlay */
+.text-overlay h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+/* Style the carousel container */
+.carousel {
+    max-width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px; /* Add space below the carousel */
+}
+
+/* Style the slider */
+.slider {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.slider div {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+/* Style the image grid container */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+    gap: 20px;
+}
+
+/* Style the individual grid items */
+.image-grid div {
+    overflow: hidden;
+}
+
+/* Style the images within the grid */
+.image-grid img {
+    width: 100%;
+    height: auto;
+}
+
+.text-overlay p {
+    font-size: 18px;
+}
+
+.centerImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}
+
+.app-nav-icon {
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.app-nav-link {
+    display: flex;        
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.app-nav-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow icons to wrap to the next line */
+    justify-content: center; /* Center the icons horizontally */
+    margin-top: 20px;
+}
+
+.iframe-container {
+    display: flex;
+    justify-content: center; 
+    margin-top: 20px; 
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Vertically center the button */
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+
+.button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px; /* Make the button rounded */
+}
