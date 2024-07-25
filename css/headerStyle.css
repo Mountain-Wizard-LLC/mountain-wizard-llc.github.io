@@ -269,3 +269,13 @@ body {
 .text-overlay p {
     font-size: 18px;
 }
+
+.logo-title {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px; /* Adjust as needed */
+    margin-right: 10px; /* Adjust spacing between logo and title */
+}
