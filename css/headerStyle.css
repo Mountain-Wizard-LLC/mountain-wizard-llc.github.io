@@ -276,6 +276,8 @@ body {
 }
 
 .logo {
-    height: 40px; /* Adjust as needed */
-    margin-right: 10px; /* Adjust spacing between logo and title */
+    height: 100%;
+    max-height: 80px; /* This should match the height of the navbar */
+    margin-right: 10px;
+    object-fit: contain;
 }
