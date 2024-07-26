@@ -1,0 +1,31 @@
+/* 404 Style */
+
+.error-container {
+    text-align: center;
+    padding: 50px;
+}
+
+.error-container h1 {
+    font-size: 100px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.error-container p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.home-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.home-link:hover {
+    background-color: #555;
+}
