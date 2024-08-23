@@ -16,6 +16,42 @@
     <link rel="stylesheet" href="../css/grid.css">
     <link rel="stylesheet" href="../css/cardStyles.css">
     <link rel="stylesheet" href="../css/contactStyle.css">
+    <style>
+        /* Base styles for desktop and larger screens */
+        .section {
+            display: flex;
+            align-items: center;
+            margin-top: 40px;
+        }
+        .image-container {
+            flex: 1;
+            text-align: center;
+        }
+        .text-container {
+            flex: 2;
+            padding: 0 20px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Media query for smaller screens (e.g., mobile and tablets) */
+        @media screen and (max-width: 768px) {
+            .section {
+                display: block;
+                text-align: center;
+            }
+            .image-container {
+                margin-top: 20px;
+                order: 2; /* Ensures image is below the text */
+            }
+            .text-container {
+                order: 1; /* Ensures text is above the image */
+                padding: 0;
+            }
+        }
+    </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../js/global.js"></script>
 
@@ -45,33 +81,33 @@
         </div>
 
         <!-- Section 1: About Me -->
-        <div class="section about-me" style="display: flex; align-items: center; margin-top: 20px;">
-            <div class="image-container" style="flex: 1; text-align: center;">
+        <div class="section about-me">
+            <div class="image-container">
                 <img src="../images/KruizeChristensen.png" alt="Circle Image of Kruize" style="max-width: 150px; border-radius: 50%;">
             </div>
-            <div class="text-container" style="flex: 2; padding-left: 20px;">
+            <div class="text-container">
                 <h2>About Me</h2>
                 <p>Mountain Wizard LLC was founded in Fairfield, Montana. My journey into designing t-shirt prints began when I wanted to surprise my girlfriend with something creative and meaningful. When we first met, we were paddleboarding in Hidden Bay on Swan Lake in Montana. We spent hours out on the paddleboards, so much so that we should have had hypothermia. Drawing on my skills in drafting, 3D printing, art, photography, and Photoshop, I set out to capture that scene in an image. Rather than taking a simple photo and slapping it onto something, I wanted to create silhouette work that was unique and evocative.</p>
             </div>
         </div>
 
         <!-- Section 2: Making the Sweatshirt -->
-        <div class="section making-sweatshirt" style="display: flex; align-items: center; margin-top: 40px;">
-            <div class="text-container" style="flex: 2; padding-right: 20px;">
+        <div class="section making-sweatshirt">
+            <div class="text-container">
                 <h2>Making the Sweatshirt</h2>
                 <p>This is the story behind the first t-shirt design I made. It was inspired by the memorable experience at Swan Lake and my desire to create something special and personal. My approach was to use silhouette work to capture the essence of that moment.</p>
             </div>
-            <div class="image-container" style="flex: 1; text-align: center;">
+            <div class="image-container">
                 <img src="../images/morganSweatshirt.png" alt="T-Shirt Design" style="max-width: 200px;">
             </div>
         </div>
 
         <!-- Section 3: The Company Name -->
-        <div class="section company-name" style="display: flex; align-items: center; margin-top: 40px;">
-            <div class="image-container" style="flex: 1; text-align: center;">
+        <div class="section company-name">
+            <div class="image-container">
                 <img src="../images/techwizz.jpg" alt="Tech Wizard" style="max-width: 200px;">
             </div>
-            <div class="text-container" style="flex: 2; padding-left: 20px;">
+            <div class="text-container">
                 <h2>The Company Name</h2>
                 <p>The name "Mountain Wizard" comes from various nicknames I've acquired throughout my life. "Mountain" is derived from the translation of Montana, which means "mountain" in Spanish. Growing up, I had the nickname "Mountain Man" in football because of my ability to carry two 5-foot-tall tackling dummies, one on each shoulder. The "Wizard" part comes from a nickname I earned in school. In my small farm town, there weren't many people who were tech-savvy. I had a natural aptitude for fixing any technology I got my hands on, almost like I was using magic, so I was dubbed the "Tech Wizard."</p>
             </div>
