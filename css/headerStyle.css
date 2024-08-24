@@ -1,3 +1,4 @@
+/* Reset default margin and padding */
 img {
     margin: 0;
     padding: 0;
@@ -23,6 +24,7 @@ footer {
 :root {
     --bg-color: #f2f2f2; /* Light background color */
     --text-color: #333; /* Dark text color */
+    --navbar-height: 50px; /* Default navbar height */
 }
 
 /* Dark mode styles */
@@ -41,7 +43,6 @@ body {
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
-    
 }
 
 /* Dark mode styles */
@@ -63,6 +64,7 @@ body {
     padding: 10px 20px;
     position: relative;
     z-index: 9999;
+    height: var(--navbar-height); /* Set height from variable */
 }
 
 .navbar ul {
@@ -137,7 +139,6 @@ body {
     }
 }
 
-
 /* Middle Section Styles */
 .content {
     background-color: #f2f2f2; /* Light gray background color */
@@ -152,7 +153,6 @@ body {
     color: #fff; /* White text color */
     text-align: center;
     padding: 20px;  
-      
 }
 
 .footer p {
@@ -183,7 +183,6 @@ body {
     margin-right: 10px; /* Add spacing between images */
 }
 
-
 /* Style the submenu */
 .submenu {
     display: none; /* Initially hide the submenu */
@@ -193,7 +192,6 @@ body {
     padding: 0;
     margin: 0;
     width: 200px; /* Adjust the maximum width as needed */
-
 }
 
 /* Style the submenu items */
@@ -204,7 +202,6 @@ body {
     padding: 10px;
     text-align: center; /* Center the text horizontally */
     height: 100%; /* Set the height of submenu items to 100% */
-
 }
 
 /* Style the submenu links */
@@ -229,10 +226,10 @@ body {
 .image-container {
     position: relative;
     width: 100%; /* Set the width you want */
-    height: 300px; /* Set the fixed height you want */
+    height: calc(var(--navbar-height) * 0.6); /* Set height as a percentage of navbar height */
     overflow: hidden; /* Ensure overflow is hidden */
     margin: 0 auto; /* Center the container horizontally */
-    border-radius: 10px; /* makes edges round
+    border-radius: 10px; /* Makes edges round */
 }
 
 /* Style the image */
@@ -277,7 +274,7 @@ body {
 
 .logo {
     height: 100%;
-    max-height: 80px; /* This should match the height of the navbar */
+    max-height: var(--navbar-height); /* Match the height of the navbar */
     margin-right: 10px;
     object-fit: contain;
 }
