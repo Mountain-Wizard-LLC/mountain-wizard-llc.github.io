@@ -21,18 +21,20 @@
         .section {
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between; /* Distributes space between text and image containers */
             margin-top: 40px;
-            text-align: center;
         }
-        .image-container {
+        .image-container, .text-container {
             flex: 1;
-            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centers content horizontally */
+            justify-content: center; /* Centers content vertically */
+            max-width: 50%; /* Ensures each container doesn't exceed half the screen width */
         }
         .text-container {
-            flex: 2;
+            text-align: center; /* Centers the text within the container */
             padding: 0 20px;
-            text-align: center; /* Center the text within the container */
         }
         .image-container img {
             max-width: 100%;
