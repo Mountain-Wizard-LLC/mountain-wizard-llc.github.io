@@ -200,12 +200,19 @@ body {
 /* Style the image container */
 .image-container {
     position: relative;
+    width: 100%; /* Set the width you want */
+    height: 300px; /* Set the fixed height you want */
+    overflow: hidden; /* Ensure overflow is hidden */
+    margin: 0 auto; /* Center the container horizontally */
+    border-radius: 10px; /* makes edges round
 }
 
 /* Style the image */
 .image-container img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container */
+    display: block; /* Ensure the image does not have default inline spacing */
 }
 
 /* Style the text overlay */
