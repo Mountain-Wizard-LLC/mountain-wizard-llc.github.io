@@ -13,6 +13,15 @@
     justify-content: center; /* Centers content vertically */
     max-width: 50%; /* Ensures each container doesn't exceed half the screen width */
 }
+
+.image-container {
+    position: relative;
+    width: 100%; /* Set the width you want */
+    height: 300px; /* Set the fixed height you want */
+    overflow: hidden; /* Ensure overflow is hidden */
+    margin: 0 auto; /* Center the container horizontally */
+    border-radius: 10px; /* makes edges round
+}
 .text-container {
     text-align: center; /* Centers the text within the container */
     padding: 0 20px;
