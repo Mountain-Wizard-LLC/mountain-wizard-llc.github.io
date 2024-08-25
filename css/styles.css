@@ -14,7 +14,6 @@ footer {
 :root {
     --bg-color: #f2f2f2; /* Light background color */
     --text-color: #333; /* Dark text color */
-    --navbar-height: 50px; /* Default navbar height */
 }
 
 /* Dark mode styles */
