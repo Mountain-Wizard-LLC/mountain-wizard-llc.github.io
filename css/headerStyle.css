@@ -1,58 +1,4 @@
-img {
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
-
-footer {
-    margin: 0;
-    padding: 0;
-}
-
-/* CSS for the site title */
-.site-title {
-    font-size: 24px;
-    margin-right: 20px; /* Add space between the title and the menu */
-    color: #fff; /* Text color for the title */
-    white-space: nowrap; /* Prevent line breaks */
-    text-align: center;
-    padding-left: 60px;
-}
-
-/* Default light mode styles */
-:root {
-    --bg-color: #f2f2f2; /* Light background color */
-    --text-color: #333; /* Dark text color */
-}
-
-/* Dark mode styles */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg-color: #333; /* Dark background color */
-        --text-color: #f2f2f2; /* Light text color */
-    }
-}
-
-/* Reset some default margin and padding */
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-    
-}
-
-/* Dark mode styles */
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: var(--bg-color-dark); /* Dark mode background color */
-        color: var(--text-color-dark); /* Dark mode text color */
-    }
-}
-
-/* Default navigation bar styles */
+/* Header Styles */
 .navbar {
     font-family: Calibri, sans-serif;
     background-color: #242323 !important;
@@ -63,6 +9,7 @@ body {
     padding: 10px 20px;
     position: relative;
     z-index: 9999;
+    height: var(--navbar-height); /* Set height from variable */
 }
 
 .navbar ul {
@@ -137,13 +84,14 @@ body {
     }
 }
 
-
-/* Middle Section Styles */
-.content {
-    background-color: #f2f2f2; /* Light gray background color */
-    padding: 20px;
+/* Site Title */
+.site-title {
+    font-size: 24px;
+    margin-right: 20px; /* Add space between the title and the menu */
+    color: #fff; /* Text color for the title */
+    white-space: nowrap; /* Prevent line breaks */
     text-align: center;
-    flex-grow: 1;
+    padding-left: 60px;
 }
 
 /* Footer Styles */
@@ -152,7 +100,6 @@ body {
     color: #fff; /* White text color */
     text-align: center;
     padding: 20px;  
-      
 }
 
 .footer p {
@@ -181,103 +128,4 @@ body {
     width: 30px; /* Adjust the width as needed */
     height: 30px; /* Adjust the height as needed */
     margin-right: 10px; /* Add spacing between images */
-}
-
-
-/* Style the submenu */
-.submenu {
-    display: none; /* Initially hide the submenu */
-    position: absolute;
-    background-color: #525252;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    width: 200px; /* Adjust the maximum width as needed */
-
-}
-
-/* Style the submenu items */
-.submenu li {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    padding: 10px;
-    text-align: center; /* Center the text horizontally */
-    height: 100%; /* Set the height of submenu items to 100% */
-
-}
-
-/* Style the submenu links */
-.submenu a {
-    color: white;
-    text-decoration: none;
-}
-
-/* Show the submenu on hover */
-.has-submenu:hover .submenu {
-    display: block; /* Display the submenu when the parent is hovered over */
-}
-
-/* Media query to hide submenu on larger screens */
-@media (min-width: 769px) {
-    .has-submenu .submenu {
-        display: none; /* Hide the submenu on screens wider than 768px */
-    }
-}
-
-/* Style the image container */
-.logo-container {
-    position: relative;
-    width: 100%; /* Set the width you want */
-    height: 300px; /* Set the fixed height you want */
-    overflow: hidden; /* Ensure overflow is hidden */
-    margin: 0 auto; /* Center the container horizontally */
-    border-radius: 10px; /* makes edges round
-}
-
-/* Style the image */
-.logo-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure the image covers the container */
-    display: block; /* Ensure the image does not have default inline spacing */
-}
-
-/* Style the text overlay */
-.text-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    pointer-events: none; /* Ensures the overlay does not interfere with image events */
-    text-align: center; /* Center text horizontally */
-}
-
-/* Style the text elements within the overlay */
-.text-overlay h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.text-overlay p {
-    font-size: 18px;
-}
-
-.logo-title {
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    height: 100%;
-    max-height: 80px; /* This should match the height of the navbar */
-    margin-right: 10px;
-    object-fit: contain;
 }
