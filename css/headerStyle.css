@@ -45,6 +45,17 @@
     margin: 3px 0;
 }
 
+.logo-container {
+    display: flex;
+    align-items: center; /* Vertically center logo and text */
+}
+
+.logo-container .logo {
+    margin-right: 20px; /* Space between the logo and the company name */
+}
+
+
+
 /* Media query to show/hide elements and adjust layout on small screens */
 @media (max-width: 770px) {
     .navbar {
@@ -52,11 +63,14 @@
         align-items: center; /* Center the logo and company name */
     }
 
+    .logo-container {
+        justify-content: center; /* Center the logo and name within the container */
+        margin-bottom: 10px; /* Add some space below the logo-container */
+    }
+
     .site-title {
-        order: 1; /* Ensure the title is displayed first */
-        margin-right: 0; /* Remove right margin */
-        padding-left: 0; /* Remove left padding */
-        text-align: center; /* Center the text */
+        margin: 0; /* Remove any extra margin */
+        padding: 0; /* Remove any extra padding */
     }
 
     .menu-toggle {
@@ -102,11 +116,9 @@
 /* Site Title */
 .site-title {
     font-size: 24px;
-    margin-right: 20px; /* Add space between the title and the menu */
     color: #fff; /* Text color for the title */
     white-space: nowrap; /* Prevent line breaks */
     text-align: center;
-    padding-left: 60px;
 }
 
 /* Footer Styles */

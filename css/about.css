@@ -20,7 +20,7 @@
     height: 300px; /* Set the fixed height you want */
     overflow: hidden; /* Ensure overflow is hidden */
     margin: 0 auto; /* Center the container horizontally */
-    border-radius: 10px; /* makes edges round
+    border-radius: 10px; /* makes edges round */
 }
 .text-container {
     text-align: center; /* Centers the text within the container */
