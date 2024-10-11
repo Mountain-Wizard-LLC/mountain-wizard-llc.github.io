@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /template.html
+Disallow: /header.html
+Disallow: /footer.html
+
+Sitemap: https://mountainwizardllc.com/sitemap.xml
