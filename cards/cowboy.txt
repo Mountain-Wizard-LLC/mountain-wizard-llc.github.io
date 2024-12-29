@@ -2,5 +2,4 @@ shirts/cowboy/unisex-classic-tee-sand.jpg
 Cowboy
 A rugged t-shirt design for fans of the Wild West.
 tags: cowboy, western, t-shirt, rugged
-link1: https://www.google.com/
-link2: https://mountainwizardllc.com/
+link1: https://www.etsy.com/shop/MountainWizardLLC?
