@@ -1,6 +1,0 @@
-kruize.jpg
-Mr. Kruize
-A man with a background in science
-tags: man, human, profile, biography
-link1: https://www.google.com/
-link2: https://mountainwizardllc.com/
