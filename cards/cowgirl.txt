@@ -3,3 +3,4 @@ Cowgirl
 A fashionable t-shirt design for the bold cowgirl.
 tags: cowgirl, western, t-shirt, stylish
 link1: https://www.etsy.com/shop/MountainWizardLLC?
+link2: https://mountainwizardllc.com/
