@@ -1,0 +1,6 @@
+shirts/lumberjack/unisex-classic-tee-sand.jpg
+Lumberjack
+A flannel-inspired t-shirt for the hardworking lumberjack.
+tags: lumberjack, flannel, outdoors, t-shirt
+link1: https://www.google.com/
+link2: https://mountainwizardllc.com/

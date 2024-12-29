@@ -1,0 +1,6 @@
+shirts/vampire/unisex-classic-tee-sand.jpg
+Vampire
+A spooky t-shirt perfect for vampire enthusiasts.
+tags: vampire, gothic, Halloween, t-shirt
+link1: https://www.google.com/
+link2: https://mountainwizardllc.com/

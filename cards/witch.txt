@@ -1,0 +1,6 @@
+shirts/witch/unisex-classic-tee-sand.jpg
+Witch
+A magical t-shirt for the enchanting witch in your life.
+tags: witch, magic, Halloween, t-shirt
+link1: https://www.google.com/
+link2: https://mountainwizardllc.com/
