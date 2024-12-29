@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const cardFiles = ['bride.txt', 'groom.txt', 'cowboy.txt', 'cowgirl.txt', 'lumberjack.txt', 'lumberjill.txt', 'vampire.txt', 'werewolf.txt', 'witch.txt', 'wizard.txt'];
+  const cardFiles = ['wizard.txt', 'groom.txt', 'bride.txt', 'cowboy.txt', 'cowgirl.txt', 'lumberjack.txt', 'lumberjill.txt', 'werewolf.txt', 'vampire.txt', 'witch.txt'];
   const container = document.getElementById('cardContainer');
   const searchInput = document.getElementById('searchInput');
 
