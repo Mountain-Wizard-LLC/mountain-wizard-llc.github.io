@@ -3,3 +3,4 @@ Lumberjack
 A flannel-inspired t-shirt for the hardworking lumberjack.
 tags: lumberjack, flannel, outdoors, t-shirt
 link1: https://www.etsy.com/shop/MountainWizardLLC?
+link2: https://mountainwizardllc.com/
