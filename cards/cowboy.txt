@@ -3,3 +3,4 @@ Cowboy
 A rugged t-shirt design for fans of the Wild West.
 tags: cowboy, western, t-shirt, rugged
 link1: https://www.etsy.com/shop/MountainWizardLLC?
+link2: https://mountainwizardllc.com/
