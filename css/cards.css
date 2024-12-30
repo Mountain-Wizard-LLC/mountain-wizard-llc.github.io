@@ -35,5 +35,15 @@ body {
     color: #555;
   }
   
+  #searchInput {
+    width: 90%;          /* Makes the input field take up the full width of its container */
+    max-width: 400px;     /* Set a maximum width for the input */
+    padding: 10px;        /* Adds padding inside the input field for a bigger box */
+    font-size: 16px;      /* Increases the font size for better readability */
+    margin-top: 20px;     /* Adds white space above the input field */
+    margin-bottom: 20px;  /* Adds white space below the input field */
+    border-radius: 5px;   /* Optional: Adds rounded corners to the input */
+    border: 1px solid #ccc; /* Optional: Adds a border around the input */
+}
 
   
