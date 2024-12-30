@@ -1,30 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const cardFiles = ['wizard.txt', 'groom.txt', 'bride.txt', 'cowboy.txt', 'cowgirl.txt', 'lumberjack.txt', 'lumberjill.txt', 'werewolf.txt', 'vampire.txt', 'witch.txt', 'birdHunter.txt', 'birdHuntress.txt', 'bowHunter.txt', 'bowHuntress.txt', 'hunter.txt', 'huntress.txt', 'viking.txt', 'valkyrie.txt', 'jolfaor.txt', 'buckinMH.txt', 'buckinWH.txt'];
+  const csvFilePath = 'cards/cards.csv';
   const container = document.getElementById('cardContainer');
   const searchInput = document.getElementById('searchInput');
 
   async function loadCards() {
     container.innerHTML = '';
-    for (const fileName of cardFiles) {
-      const textFilePath = `cards/${fileName}`;
-      try {
-        const response = await fetch(textFilePath);
-        const text = await response.text();
-        const lines = text.split('\n');
-        
-        const imagePath = `images/${lines[0].trim()}`;
-        const title = lines[1].trim();
-        const description = lines[2].trim();
-        const tags = lines.find(line => line.startsWith('tags:')).split(': ')[1];
-        const link1 = lines.find(line => line.startsWith('link1:')).split(': ')[1];
-        const link2 = lines.find(line => line.startsWith('link2:')).split(': ')[1];
+    try {
+      const response = await fetch(csvFilePath);
+      const csvText = await response.text();
 
+      // Parse CSV
+      const rows = csvText
+        .split('\n')
+        .filter(row => row.trim() !== '') // Remove empty rows
+        .map(row => row.match(/(?:[^,"']+|"[^"]*")+/g).map(cell => cell.replace(/(^"|"$)/g, '').trim()));
+
+      const [header, ...data] = rows; // Separate header from data rows
+
+      data.forEach(row => {
+        if (row.length < header.length) return; // Skip incomplete rows
+
+        const [image, title, description, tags, link1, link2] = row;
         const card = document.createElement('div');
         card.classList.add('card');
         card.dataset.tags = tags; // Store tags for search
 
         const img = document.createElement('img');
-        img.src = imagePath;
+        img.src = `images/${image}`;
         img.alt = title;
         card.appendChild(img);
 
@@ -38,13 +40,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const buyButton = document.createElement('button');
         buyButton.textContent = 'Buy';
-        buyButton.addEventListener('click', () => showPopup(imagePath, description, link1, link2));
+        buyButton.addEventListener('click', () => showPopup(img.src, description, link1, link2));
         card.appendChild(buyButton);
 
         container.appendChild(card);
-      } catch (error) {
-        console.error('Error fetching file:', error);
-      }
+      });
+    } catch (error) {
+      console.error('Error fetching or parsing CSV file:', error);
     }
   }
 
