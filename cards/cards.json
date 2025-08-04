@@ -1,0 +1,48 @@
+{
+  "products": {
+    "tshirts": [
+      {
+        "name": "Wizard",
+        "image_path": "/images/shirts/wizard/unisex-classic-tee-sand-front.jpg",
+        "description": "A mystical t-shirt design for wizards and spellcasters.",
+        "tags": [
+          "man",
+          "guy",
+          "male",
+          "boy",
+          "mountain",
+          "wizard",
+          "magic",
+          "fantasy",
+          "t-shirt",
+          "company",
+          "logo"
+        ],
+        "etsylink": "https://www.etsy.com/listing/1872220638/mountain-wizard-unisex-classic-tee"
+      },
+      {
+        "name": "Buckin Montana Viking M",
+        "image_path": "/images/shirts/buckinvikingm/unisex-classic-tee-sand-front.jpg",
+        "description": "A t-shirt perfect for viking fans and medieval adventurers.",
+        "tags": [
+          "man",
+          "guy",
+          "male",
+          "boy",
+          "buckin",
+          "montana",
+          "t-shirt",
+          "outdoors",
+          "dragon",
+          "viking",
+          "medieval",
+          "nordic"
+        ],
+        "etsylink": "https://mountainwizardllc.etsy.com/listing/4302038448/buckin-montana-viking-m-unisex-classic"
+      }
+      // ...remaining items omitted for brevity
+    ],
+    "hoodies": [],
+    "desk_mats": []
+  }
+}
